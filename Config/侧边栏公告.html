@@ -1,0 +1,223 @@
+// 整体配置文档：https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/
+<script type="text/javascript">
+    window.cnblogsConfig = {
+        blogUser: "StarkLiu", // 用户名
+        blogAvatar: "https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125044357rick.jpg", // 用户头像
+        blogStartDate: "2021-01-24", // 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
+
+        // 用于设置样式文件加载源
+        GhUserName: 'StarkLiu9973',
+        GhRepositories: 'Cnblogs-Theme-SimpleMemory',
+        GhVersions: 'v1.3.3',
+
+        webpageTitleOnblur: '(oﾟvﾟ)ノ Hi',           //当页面失去焦点，页面title显示的文字
+        webpageTitleOnblurTimeOut: 500,              //当页面失去焦点，页面title变化的延时时间,单位ms，-1不变
+        webpageTitleFocus: '(*´∇｀*) Welcome back!', //当页面获取焦点，页面title显示的文字
+        webpageTitleFocusTimeOut: 1000,              //当页面获取焦点，页面title变化的延时时间，单位ms, -1不变
+
+        webpageIcon: 'https://blog-static.cnblogs.com/files/stark-liu/duck.ico', //网站图标
+        switchDayNight: {
+            enable: true,       // 是否开启日/夜间模式切换按钮
+            auto: {             // 自动切换相关配置
+                enable: false,  // 开启自动切换
+                dayHour: 6,     // 日间模式开始时间，整数型，24小时制
+                nightHour: 19   // 夜间模式开始时间，整数型，24小时制
+            }
+        },
+
+        fontIconExtend: "//at.alicdn.com/t/font_xxxxxxxxx.css", //字体图标库扩展Css的Url
+        //自定义侧边菜单栏，可以放友链？
+        // menuCustomList: {
+        //     "title1": { // 标题
+        //         "data": [ // 列表数据 ['列表', '链接']
+        //             ['我的博客1', 'https://www.cnblogs.com/bndong/'],
+        //             ['我的博客2', 'https://www.cnblogs.com/bndong/'],
+        //             ['我的博客3', 'https://www.cnblogs.com/bndong/'],
+        //             ['我的博客4', 'https://www.cnblogs.com/bndong/'],
+        //             ['我的博客5', 'https://www.cnblogs.com/bndong/'],
+        //         ],
+        //         "icon": "icon-brush_fill" // 配置图标，参考文档：定制化/字体图标库
+        //     }
+        // },
+        menuNavList: [ // 列表数据 ['导航名称', '链接', 'icon']
+            ['GitHub', 'https://www.github.com/StarkLiu9973/', 'icon-github'],
+            ['CSDN', 'https://blog.csdn.net/lxy767087094', 'icon-csdn'],
+        ],
+        menuUserInfoBgImg: 'https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125094006starks.JPG', //菜单个人信息背景图片设置
+
+        progressBar: { //进度条配置，显示在页面顶部。
+            id: 'top-progress-bar', // 请勿修改该值
+            color: '#77b6ff',
+            height: '3px',
+            duration: 0.2,
+        },
+
+        loading: { //页面加载loading
+            rebound: {
+                tension: 14,
+            },
+            spinner: {
+                id: 'spinner',
+                radius: 90,
+            },
+            rebound: {
+                tension: 14,
+                friction: 10,
+            },
+            spinner: {
+                id: 'spinner',
+                radius: 90,
+                sides: 6,
+                depth: 8,
+                colors: {
+                    background: '#02C39A',
+                    stroke: null,
+                    base: null,
+                    child: '#77b6ff',
+                },
+                alwaysForward: true,
+                restAt: null,
+                renderBase: false,
+            },
+        },
+
+        homeTopAnimationRendered: false, //是否渲染主页banner动效。
+        essayTopAnimationRendered: false, //是否渲染文章页banner动效
+        bgAnimationRendered: false, //是否渲染页面背景动效，这三个动效都可以自定义
+
+        homeTopImg: [ //主页banner图片Url，推荐尺寸>= 1920*1080，支持多张，每次刷新随机设置一张。
+            "https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125133736blackhole.jpg",
+            "https://xn--wcso9o.xn--fiqs8s/images/aa3069336471bf83ad8001750e372b96.png",
+            "https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125153342pixelBar.png"
+        ],
+        homeBannerText: [ //主页banner上的标语，
+            "长恨此身非我有，何时忘却营营。",
+            "一切都是最好的安排。"
+        ],
+        // homeBannerTextType: "one", //主页 banner上的标语获取源，jinrishici:刷新随机获取一句古诗词, one:每日获取一句话
+        essayTopImg: [ //文章页banner图片Url，支持多张，每次刷新随机设置一张。
+            "https://xn--wcso9o.xn--fiqs8s/images/a4560d9b42ded912e2e94457078b0587.jpg",
+            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
+        ],
+        essayTitleStyle: false, //是否设置文章内容标题样式
+        essaySuffix: {
+            codeImgUrl: '', // >= v1.1.5 左侧图片设置，不配置使用 window.cnblogsConfig.blogAvatar
+            aboutHtml: '计算机研二在读，喜欢搞各种能让生活变得更简单的技术。', // 关于博主，不配置使用默认
+            copyrightHtml: '', // 版权声明，不配置使用默认
+            supportHtml: '', // 声援博主，不配置使用默认
+        },
+        reward: { //打赏功能
+            enable: true,
+            wechatpay: 'https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125045141%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.png',
+            alipay: 'https://images.cnblogs.com/cnblogs_com/stark-liu/1921797/o_210125045157%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg'
+        },
+        // weChatOfficialAccounts: '//xxxx.png', //公众号图片
+
+        codeMaxHeight: true, // 限制代码框的最大高度；如开启，代码框高度不会超过页面可视区域的70%
+        codeLineNumber: true, //是否渲染代码行号, 不与博客园行号渲染兼容
+        essayCode: {
+            fontFamily: "'Ubuntu Mono',monospace", // 代码框字体
+            fontSize: "16px", // 代码框字体大小
+        },
+        essayCodeHighlightingType: "highlightjs", // cnblogs:使用博客园代码高亮样式，介意加载速度的可以使用此配置。
+        essayCodeHighlighting: "atom-one-dark",
+        essayCodeLanguages: [
+            "C++",
+            "Go",
+            "python",
+            "SQL",
+            "Java",
+            "JavaScript",
+            "JSON",
+            "LaTeX",
+            "C",
+            "Shell",
+            "YAML",
+            "Mathematica",
+            "HTML",
+            "XML",
+            "Bash"
+        ],
+
+        footerStyle: 1, // 页脚样式，默认是2
+
+        bottomBlogroll: [ // 友情链接，[[链接名,链接]....]
+            ["申请坑位", 'https://msg.cnblogs.com/send/Stark-Liu'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/Stark-Liu'],
+        ],
+        bottomText: { // 页脚标语
+            iconFont: {  // v1.3.0 新增配置
+                icon: "icon-xl", // iconfont 图标名称
+                color: "red",     // 图标颜色
+                fontSize: "16px"  // 图标大小
+            },
+            left: "Good Good Study",
+            right: "Day Day Up",
+        },
+
+        consoleList: [ // 控制台隐藏信息列表
+            ['StarkLiu GitHub', 'https://github.com/StarkLiu9973'],
+            ['StarkLiu Email', 'liuxinyu.9973#gmail.com'],
+        ],
+        advertising: false,
+    }
+    window.cnblogsConfig.bookList = [ // 书单的配置，一般书单的数据比较多，所以建议将此配置单独出来
+        {
+            title: '在读',
+            books: [
+                {
+                    cover: 'https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/l/public/s29989149.jpg',
+                    name: '流浪地球（刘慈欣短篇小说精选）',
+                    formerNname: '',
+                    author: '刘慈欣',
+                    translator: '',
+                    press: '四川科学技术出版社',
+                    year: '2018-11',
+                    // score: 4,
+                }
+            ]
+        },
+        {
+            title: '已读',
+            books: [
+                {
+                    cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/s/public/s27264181.jpg',
+                    name: '解忧杂货店',
+                    formerNname: 'ナミヤ雑貨店の奇蹟',
+                    author: '[日] 东野圭吾',
+                    translator: '李盈春',
+                    press: '南海出版公司',
+                    year: '2014-5',
+                    score: 5,
+                },
+                {
+                    cover: 'https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/l/public/s33460607.jpg',
+                    name: '三体（全集）',
+                    formerNname: '',
+                    author: '刘慈欣',
+                    translator: '',
+                    press: '读客文化',
+                    year: '2018-11-26',
+                    score: 5,
+                }
+            ]
+        },
+        {
+            title: '搁置',
+            books: [
+                {
+                    cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s27237850.jpg',
+                    name: '百年孤独',
+                    formerNname: 'Cien años de soledad',
+                    author: '[哥伦比亚] 加西亚·马尔克斯',
+                    translator: '范晔',
+                    press: '南海出版公司',
+                    year: '2011-6',
+                    // score: 4,
+                }
+            ]
+        },
+    ];
+</script>
+<script src="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v1.3.3/src/script/simpleMemory.min.js"
+    defer></script>
